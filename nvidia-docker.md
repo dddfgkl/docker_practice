@@ -3,19 +3,43 @@ nvidia-docker是英伟达专门为在docker中利用GPU创建的docker工具，d
 
 # 1、安装docker-ce   
 安装nvidia-docker需要先安装docker-ce  
+（1）卸载原来安装的docker  
+（2）安装docker-ce   
 
+若中间存在问题，则关掉终端重新链接服务器试试   
 
 ----   
 
 # 2、安装nvidia-docker   
+（1）卸载原来的nvidia-docker及其它GPU容器  
+
+若中间存在问题，则关掉终端重新链接服务器试试   
+
+-----  
+
+# 3、拉取nvidia/cuda镜像   
+去docker-hub中寻找合适的nvidia/cuda镜像  
+（1）10.1-cudnn7-devel-ubuntu16.04和10.1-cudnn7-runtime-ubuntu16.04的区别  
+devel容器更大，里面有cudnn，不需要重新安装，runtime中没有cudnn  
+
+（2）nvidia-docker pull nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04   
+建议不要从官网拉取镜像，官网很慢，建议更改源到阿里云或者中科院的源   
+
+-----  
+
+# 4、构建nvidia/cuda容器   
+（1）nvidia-docker run -it --name=nvidia_docker1 --runtime=nvidia -v /home/macong:/home/macong nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04 /bin/bash   
+- run命令构建docker容器  
+- name指定容器名字  
+- runtimex必须指定是nvidia  
+- v代表挂载目录  
 
 
------
+----  
 
-# 3、拉去nvidia/cuda镜像   
+#### [next page](first_page.md)   
 
-----
-
+-----   
 
 # Reference  
 [知乎教程](https://zhuanlan.zhihu.com/p/88351963)   

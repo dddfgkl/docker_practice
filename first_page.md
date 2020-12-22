@@ -22,7 +22,7 @@
 （1）--name self_def_name 是自定义的docker容器的名字  
 （2）-v 是挂载实际path1到docker容器中path2的意思   
 （3）-it 是交互式新建的意思，具体意思查看help  
- (4) --device 是制定挂载的外设，比如 --device /dev/nvidia0:/dev/nvidia0 意思就是将nvidia0显卡挂载到docker   
+（4） --device 是制定挂载的外设，比如 --device /dev/nvidia0:/dev/nvidia0 意思就是将nvidia0显卡挂载到docker   
 
 -----
 
@@ -53,7 +53,6 @@ bash交互式运行alive状态的docker容器，如果容器是挂起状态的�
 
 ---
 
-#### [next page](https://github.com/dddfgkl/docker_practice/blob/master/second_page.md)   
 #### [next page](second_page.md)   
 
 
