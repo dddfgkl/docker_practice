@@ -25,6 +25,8 @@ devel容器更大，里面有cudnn，不需要重新安装，runtime中没有cud
 （2）nvidia-docker pull nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04   
 建议不要从官网拉取镜像，官网很慢，建议更改源到阿里云或者中科院的源   
 
+[添加阿里云镜像源指南1](https://blog.csdn.net/qq_28612967/article/details/102838808)   
+
 -----  
 
 # 4、构建nvidia/cuda容器   
