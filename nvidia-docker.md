@@ -37,7 +37,13 @@ devel容器更大，里面有cudnn，不需要重新安装，runtime中没有cud
 - v代表挂载目录  
 
 
-----  
+----   
+
+# 可能遇到的问题   
+（1）/bin/bash找不到的问题  
+可能docker容器里面没有这个命令，没有安装基础的bash，所以需要拉取一个有bash的docker   
+
+----   
 
 #### [next page](first_page.md)   
 
@@ -45,3 +51,5 @@ devel容器更大，里面有cudnn，不需要重新安装，runtime中没有cud
 
 # Reference  
 [知乎教程](https://zhuanlan.zhihu.com/p/88351963)   
+[nvidia-docker2安装教程博客](https://blog.csdn.net/quantum7/article/details/86416600)   
+
